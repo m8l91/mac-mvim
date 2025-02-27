@@ -19,6 +19,18 @@ local core_plugins = {
   { "MunifTanjim/prettier.nvim" },
   { "github/copilot.vim" },
   { "f-person/git-blame.nvim" },
+  -- neominimap plugin here
+  {
+    "Isrothy/neominimap.nvim",
+    version = "v3.*.*",
+    config = function()
+      vim.opt.wrap = false
+      vim.opt.sidescrolloff = 36
+      vim.g.neominimap = {
+        auto_enable = true,
+      }
+    end,
+  },
   -- Default config --
   {
     "neovim/nvim-lspconfig",

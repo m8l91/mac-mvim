@@ -197,3 +197,5 @@ linters.setup {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+--
+lvim.lsp.code_lens_refresh = false
