@@ -199,3 +199,24 @@ linters.setup {
 -- })
 --
 lvim.lsp.code_lens_refresh = false
+
+-- Set global tab settings to 2 spaces for all file types
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+-- Ensure tab settings are applied to all file types
+lvim.autocommands = {
+  {
+    {"FileType"},
+    {
+      pattern = {"*"},  -- Apply to all filetypes
+      callback = function()
+        vim.opt_local.tabstop = 2
+        vim.opt_local.softtabstop = 2
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.expandtab = true
+      end,
+    },
+  },
+}
