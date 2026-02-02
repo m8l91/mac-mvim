@@ -1,4 +1,8 @@
 -- local require = require("lvim.utils.require").require
+
+-- Must be set before ts_context_commentstring loads to skip deprecated module system
+vim.g.skip_ts_context_commentstring_module = true
+
 local core_plugins = {
   -- Custom Plugins --
   { "wbthomason/packer.nvim" },
@@ -84,7 +88,7 @@ local core_plugins = {
     config = function()
       require("lvim.core.telescope").setup()
     end,
-    dependencies = { "telescope-fzf-native.nvim" },
+    dependencies = { "telescope-fzf-native.nvim", "nvim-treesitter/nvim-treesitter" },
     lazy = true,
     cmd = "Telescope",
     enabled = lvim.builtin.telescope.active,
@@ -178,9 +182,13 @@ local core_plugins = {
     event = "User FileOpened",
   },
   {
-    -- Lazy loaded by Comment.nvim pre_hook
     "JoosepAlviste/nvim-ts-context-commentstring",
-    lazy = true,
+    event = "User FileOpened",
+    config = function()
+      require('ts_context_commentstring').setup({
+        enable_autocmd = false,
+      })
+    end,
   },
 
   -- NvimTree

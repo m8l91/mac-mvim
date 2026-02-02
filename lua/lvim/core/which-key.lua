@@ -315,13 +315,13 @@ M.config = function()
         name = "Minimap",
       -- Window-Specific Minimap Controls
         T = { "<cmd>MinimapToggle<cr>", "Toggle Minimap" },
-        O = { "<cmd>Neominimap on<cr>", "Enable global Minimap" },
-        c = { "<cmd>Neominimap off<cr>", "Disable global Minimap" },
+        O = { "<cmd>Neominimap Enable<cr>", "Enable global Minimap" },
+        c = { "<cmd>Neominimap Disable<cr>", "Disable global Minimap" },
         r = { "<cmd>Neominimap refresh<cr>", "Refresh global Minimap" },
       -- Tab-Specific Minimap Controls
         w = { "<cmd>Neominimap winToggle<cr>", "Toggle Minimap for current window" },
         R = { "<cmd>Neominimap winRefresh<cr>", "Refresh Minimap for current window" },
-        o = { "<cmd>Neominimap winOn<cr>", "Enable Minimap for current window" },
+        o = { "<cmd>Neominimap winEnable<cr>", "Enable Minimap for current window" },
         t = { "<cmd>Neominimap winToggle<cr>", "Disable Minimap for current window" },
       -- Focus Controls
         f = { "<cmd>Neominimap focus<cr>", "focuse on minimap" },

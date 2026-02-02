@@ -12,7 +12,7 @@
     "commit": "c1bad34"
   },
   "bufferline.nvim": {
-    "commit": "a4bd445"
+    "commit": "655133c"
   },
   "cmp-buffer": {
     "commit": "3022dbc"
@@ -87,10 +87,9 @@
     "commit": "bb375fb"
   },
   "nvim-treesitter": {
-    "commit": "2ce3c90"
+    "commit": "13be7a0"
   },
   "nvim-ts-context-commentstring": {
-    "commit": "0bf8fbc"
   },
   "nvim-web-devicons": {
     "commit": "986875b"
@@ -114,7 +113,7 @@
     "commit": "580b6c4"
   },
   "telescope.nvim": {
-    "commit": "9de317b"
+    "commit": "a0bbec2"
   },
   "toggleterm.nvim": {
     "commit": "68fdf85"

@@ -1,6 +1,15 @@
 local M = {}
 local Log = require "lvim.core.log"
 
+-- Map .gotmpl files to their base filetype for syntax highlighting
+vim.filetype.add({
+  pattern = {
+    [".*%.yaml%.gotmpl"] = "yaml",
+    [".*%.yml%.gotmpl"] = "yaml",
+    [".*%.json%.gotmpl"] = "json",
+  },
+})
+
 --- Load the default set of autogroups and autocommands.
 function M.load_defaults()
   local definitions = {
