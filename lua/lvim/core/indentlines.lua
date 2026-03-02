@@ -26,6 +26,7 @@ M.config = function()
           "NvimTree",
           "Trouble",
           "text",
+          "markdown",
         },
       },
     },
